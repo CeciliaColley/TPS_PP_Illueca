@@ -521,6 +521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -704,6 +709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -805,6 +815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
@@ -912,6 +927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1011,6 +1031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1087,6 +1112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Grass_15 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
@@ -1218,6 +1248,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1295,6 +1330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
@@ -1547,6 +1587,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 472079499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &491387336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebe50eb35d099654bbdf07c647f76475,
+    type: 3}
+  m_PrefabInstance: {fileID: 617100210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &504340595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5478649
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.74108315
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerArmature
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: GroundLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
 --- !u!1001 &527541975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1921,6 +2040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
@@ -2434,13 +2558,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebe50eb35d099654bbdf07c647f76475,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebe50eb35d099654bbdf07c647f76475,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ebe50eb35d099654bbdf07c647f76475,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 617100212}
   m_SourcePrefab: {fileID: 100100000, guid: ebe50eb35d099654bbdf07c647f76475, type: 3}
 --- !u!4 &617100211 stripped
 Transform:
@@ -2448,6 +2581,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 617100210}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &617100212
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491387336}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8379405417768713092, guid: ebe50eb35d099654bbdf07c647f76475, type: 3}
 --- !u!1001 &627347862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2535,6 +2690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
@@ -2822,6 +2982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Grass_15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
@@ -3231,6 +3396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3508,6 +3678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3636,6 +3811,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3713,6 +3893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 009 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
@@ -4003,6 +4188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4079,6 +4269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Grass_15 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
@@ -4240,6 +4435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4316,6 +4516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Grass_15 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
@@ -5167,6 +5372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5350,6 +5560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5426,6 +5641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Grass_15 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4,
         type: 3}
@@ -5525,6 +5745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Pile_Forest_Moss_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1090505329258949676, guid: 9a91bc2b0a89c4748a0c5b940bd461a7,
         type: 3}
@@ -5835,6 +6060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5939,6 +6169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6040,6 +6275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2,
         type: 3}
@@ -6614,6 +6854,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 381792551687779572, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6691,6 +6936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock 009 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8701426916900342829, guid: 26fa1d94d1dcf0947a736eccb9f3a8d1,
         type: 3}
@@ -6812,6 +7062,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1960897976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1979454488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: d2fbd635fea34c54cad91db76dda63ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2026038757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1979454492
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979454488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2540817853737639666, guid: d2fbd635fea34c54cad91db76dda63ac, type: 3}
 --- !u!1001 &2001061007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7001,6 +7279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2fbd635fea34c54cad91db76dda63ac,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2fbd635fea34c54cad91db76dda63ac,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7008,6 +7291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Circle_Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866621852552652557, guid: d2fbd635fea34c54cad91db76dda63ac,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2866621852552652557, guid: d2fbd635fea34c54cad91db76dda63ac,
         type: 3}
@@ -7023,7 +7311,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3389304254797006233, guid: d2fbd635fea34c54cad91db76dda63ac, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2866621852552652557, guid: d2fbd635fea34c54cad91db76dda63ac,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979454492}
   m_SourcePrefab: {fileID: 100100000, guid: d2fbd635fea34c54cad91db76dda63ac, type: 3}
 --- !u!4 &2026038758 stripped
 Transform:
@@ -7040,7 +7332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2047024358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mud Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7220,6 +7512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_11 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4500668923149335752, guid: a524090786e7ba545bd5ce3d24c9a3fb,
         type: 3}
@@ -7490,3 +7787,4 @@ SceneRoots:
   - {fileID: 1438242969}
   - {fileID: 1390625661}
   - {fileID: 2142603933}
+  - {fileID: 504340595}
