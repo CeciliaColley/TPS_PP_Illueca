@@ -5,8 +5,11 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
+    public static PlayerPrompts lastPrompt = PlayerPrompts.DEFAULT;
     private static float _playerLife;
     private static string _playerPrompt;
+    private static string _playerSpeech;
+
 
     private float maxLife;
     private float maxPlayerHearts = 3;
@@ -39,6 +42,18 @@ public class Player : MonoBehaviour
 
     public static event Action<string> OnPromptPlayer;
 
+    public static string PlayerSpeech
+    {
+        get => _playerSpeech;
+        set
+        {
+            _playerSpeech = value;
+            OnPlayerSpeech?.Invoke(_playerSpeech);
+        }
+    }
+
+    public static event Action<string> OnPlayerSpeech;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -67,4 +82,12 @@ public class Player : MonoBehaviour
     {
         return lifePerHeart;
     }
+}
+
+public enum PlayerPrompts
+{
+    GOTOGARDEN,
+    GOTOHOUSE,
+    INSPECTBRIDGE,
+    DEFAULT
 }

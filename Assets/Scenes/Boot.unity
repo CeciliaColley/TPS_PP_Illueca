@@ -388,6 +388,14 @@ MonoBehaviour:
     scenes:
     - Home
     - UI
+  - levelName: House
+    scenes:
+    - Cooking
+    - UI
+  - levelName: Garden
+    scenes:
+    - Shamba
+    - UI
   startLevel: MainMenu
 --- !u!4 &2100617550
 Transform:
