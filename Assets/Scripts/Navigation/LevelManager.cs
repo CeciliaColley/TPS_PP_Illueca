@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    /**************************************************************   VARIABLES   *****************************************************************/
+
     // VARIABLES EXPOSED TO THE EDITOR
     [Tooltip("A list of all the levels in the game, with the scenes that are supposed to be loaded in each one.")]
     [SerializeField] private List<Level> levels = new List<Level>();
@@ -39,6 +41,8 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    /**************************************************************   METHODS   *****************************************************************/
 
     // UNITY EXECUTION DEPENDANT METHODS
     private void Awake()

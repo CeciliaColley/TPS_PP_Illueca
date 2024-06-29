@@ -3,10 +3,12 @@ using Cinemachine;
 using System.Collections;
 using Unity.VisualScripting;
 
-public class StartCamera : Camera
+public class StartCamera : CameraBehaviour
 {
+    [Tooltip("The index of the camera in the camera manager 'cameras' list that you want to switch to.")]
     [SerializeField] private int switchCameraIndex;
-    [SerializeField] private float spinSpeed = 1.0f;
+    [Tooltip("The minimum speed for the spin.")]
+    [SerializeField] private float SpinSpeed = 1.0f;
 
     private void Awake()
     {
@@ -23,7 +25,14 @@ public class StartCamera : Camera
     private void OnEnable()
     {
         SpinComplete += OnSpinCompleteHandler;
-        LevelManager.Instance.LevelLoadedEvent += OnLevelLoaded;
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.LevelLoadedEvent += OnLevelLoaded;
+        }
+        else
+        {
+            Spin();
+        }
     }
 
     private void OnDisable()
@@ -34,12 +43,15 @@ public class StartCamera : Camera
     private void OnLevelLoaded()
     {
         Spin();
-        LevelManager.Instance.LevelLoadedEvent -= OnLevelLoaded;
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.LevelLoadedEvent -= OnLevelLoaded;
+        }
     }
 
     private void Spin()
     {
-        StartCoroutine(FullSpin(spinSpeed));
+        StartCoroutine(FullSpin(SpinSpeed));
     }
 
     private void OnSpinCompleteHandler()

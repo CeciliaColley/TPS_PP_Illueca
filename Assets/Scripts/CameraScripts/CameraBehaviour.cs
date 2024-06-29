@@ -5,16 +5,19 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Camera : MonoBehaviour
+public class CameraBehaviour : MonoBehaviour
 {
+    [Tooltip("The seconds b")]
+    [SerializeField] private float spinStartDelay = 1.0f;
     [Tooltip("The seconds between the spin ending, and the invocation of the 'OnSpinEnd' events.")]
-    [SerializeField] private float spinDelay = 2.0f;
+    [SerializeField] private float spinEndDelay = 2.0f;
     protected CinemachineVirtualCamera _camera;
     protected Action SpinComplete;
 
 
     protected IEnumerator FullSpin(float speed)
     {
+        yield return new WaitForSeconds(spinStartDelay);
         // Get orbital transposer
         var orbitalTransposer = _camera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
         if (orbitalTransposer == null)
@@ -44,7 +47,7 @@ public class Camera : MonoBehaviour
             orbitalTransposer.m_XAxis.Value += speed * Time.deltaTime;
             yield return null;
         }
-        yield return new WaitForSeconds(spinDelay);
+        yield return new WaitForSeconds(spinEndDelay);
         // Ensure m_XAxis.Value is exactly 0
         orbitalTransposer.m_XAxis.Value = 0f;
         // Invoke events that are calles when the spin is over
@@ -66,4 +69,8 @@ public class Camera : MonoBehaviour
         }
     }
 }
+
+
+
+
 

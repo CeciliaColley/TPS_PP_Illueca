@@ -3,9 +3,16 @@ using UnityEngine.UI;
 
 public class HeartDisplay : MonoBehaviour
 {
-    public GameObject heartPrefab;  // Prefab for the heart image
-    public Transform heartContainer;  // Container to hold the heart images
-    public float spaceBetweeenHearts = 50;
+    [SerializeField] private GameObject heartPrefab;
+    [SerializeField] private Transform heartContainer;
+    [SerializeField] private float spaceBetweeenHearts = 50;
+
+    private float heartWidth;
+
+    private void Start()
+    {
+        UpdateHearts(Player.PlayerLives);
+    }
 
     private void OnEnable()
     {
@@ -25,11 +32,17 @@ public class HeartDisplay : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        RectTransform heartRectTransform = heartPrefab.GetComponent<RectTransform>();
+        if (heartRectTransform != null)
+        {
+            heartWidth = heartRectTransform.rect.width;
+        }
+
         // Create new hearts
         for (int i = 0; i < playerLives; i++)
         {
             GameObject newHeart = Instantiate(heartPrefab, heartContainer);
-            newHeart.GetComponent<RectTransform>().anchoredPosition = new Vector2(i * spaceBetweeenHearts, 0);
+            newHeart.GetComponent<RectTransform>().anchoredPosition = new Vector2((i * (spaceBetweeenHearts + heartWidth)), 0);
         }
     }
 

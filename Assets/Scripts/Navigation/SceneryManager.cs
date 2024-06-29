@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SceneryManager : MonoBehaviour
 {
+    /**************************************************************   VARIABLES   *****************************************************************/
+
     // VARIABLES EXPOSED TO THE EDITOR
     [SerializeField] private Image loadingBarFill;
     [SerializeField] private Canvas loadingScreen;
@@ -13,6 +15,9 @@ public class SceneryManager : MonoBehaviour
     // STATIC VARIABLES
     public static SceneryManager Instance;
 
+    /**************************************************************   METHODS   *****************************************************************/
+
+    // UNITY EXECUTION DEPENDANT METHODS
     private void Awake()
     {
         if (Instance == null)
@@ -27,6 +32,7 @@ public class SceneryManager : MonoBehaviour
         loadingScreen.enabled = false;
     }
 
+    // CLASS METHODS
     public void EnableLoadScreen()
     {
         loadingBarFill.fillAmount = 0;

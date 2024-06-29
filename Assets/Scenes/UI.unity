@@ -151,7 +151,7 @@ MonoBehaviour:
   heartPrefab: {fileID: 683093977157553417, guid: 8c6e34d7682dfe7429ad1eccbd865311,
     type: 3}
   heartContainer: {fileID: 1311657248}
-  spaceBetweeenHearts: 50
+  spaceBetweeenHearts: 20
 --- !u!4 &1016623323
 Transform:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -726.0757, y: -477.75317}
+  m_AnchoredPosition: {x: -691, y: -440}
   m_SizeDelta: {x: -1452.1515, y: -955.5063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311657249
