@@ -52,7 +52,6 @@ public class SceneryManager : MonoBehaviour
 
         while (elapsedTime < fillTime)
         {
-            Debug.Log(loadingBarFill.fillAmount);
             elapsedTime += Time.deltaTime;
             float progress = elapsedTime / fillTime;
             loadingBarFill.fillAmount = Mathf.Lerp(startingFillAmount, targetFillAmount, progress);

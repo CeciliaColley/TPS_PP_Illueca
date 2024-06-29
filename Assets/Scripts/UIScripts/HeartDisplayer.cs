@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class HeartDisplay : MonoBehaviour
 
     private void Start()
     {
-        UpdateHearts(Player.PlayerLives);
+        UpdateHearts(Player.PlayerLife);
     }
 
     private void OnEnable()
@@ -24,7 +25,7 @@ public class HeartDisplay : MonoBehaviour
         Player.OnPlayerLivesChanged += UpdateHearts;
     }
 
-    void UpdateHearts(int playerLives)
+    void UpdateHearts(float playerLife)
     {
         // Clear existing hearts
         foreach (Transform child in heartContainer)
@@ -38,11 +39,27 @@ public class HeartDisplay : MonoBehaviour
             heartWidth = heartRectTransform.rect.width;
         }
 
+        float lifeRemainder = playerLife % Player.Instance.GetLifePerHeart();
+        float fullHearts = (playerLife - lifeRemainder) / Player.Instance.GetLifePerHeart();
+        int heartsCounter;
+        
         // Create new hearts
-        for (int i = 0; i < playerLives; i++)
+        for (heartsCounter = 0; heartsCounter < fullHearts; heartsCounter++)
         {
             GameObject newHeart = Instantiate(heartPrefab, heartContainer);
-            newHeart.GetComponent<RectTransform>().anchoredPosition = new Vector2((i * (spaceBetweeenHearts + heartWidth)), 0);
+            newHeart.GetComponent<RectTransform>().anchoredPosition = new Vector2((heartsCounter * (spaceBetweeenHearts + heartWidth)), 0);
+        }
+
+        if (lifeRemainder > 0)
+        {
+            GameObject newHeart = Instantiate(heartPrefab, heartContainer);
+            newHeart.GetComponent<RectTransform>().anchoredPosition = new Vector2(heartsCounter * (spaceBetweeenHearts + heartWidth), 0);
+            Image heartImage = newHeart.GetComponent<Image>();
+            if (heartImage != null)
+            {
+                float fillAmount = (float)lifeRemainder / Player.Instance.GetLifePerHeart();
+                heartImage.fillAmount = fillAmount;
+            }
         }
     }
 

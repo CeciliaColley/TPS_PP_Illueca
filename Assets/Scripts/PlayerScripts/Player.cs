@@ -5,21 +5,26 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
-    private static int _playerLives;
-    public static int PlayerLives
+    private static float _playerLife;
+
+    private float maxLife;
+    private float maxPlayerHearts = 3;
+    private float lifePerHeart = 10;
+
+    public static float PlayerLife
     {
-        get => _playerLives;
+        get => _playerLife;
         set
         {
-            if (_playerLives != value)
+            if (_playerLife != value)
             {
-                _playerLives = value;
-                OnPlayerLivesChanged?.Invoke(_playerLives);
+                _playerLife = value;
+                OnPlayerLivesChanged?.Invoke(_playerLife);
             }
         }
     }
 
-    public static event Action<int> OnPlayerLivesChanged;
+    public static event Action<float> OnPlayerLivesChanged;
 
     private void Awake()
     {
@@ -41,6 +46,12 @@ public class Player : MonoBehaviour
 
     private void Initialize()
     {
-        _playerLives = 3;
+        maxLife = maxPlayerHearts * lifePerHeart;
+        _playerLife = maxLife;
+    }
+
+    public float GetLifePerHeart()
+    {
+        return lifePerHeart;
     }
 }
