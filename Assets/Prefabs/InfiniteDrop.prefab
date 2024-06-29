@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6272644325334654650
+--- !u!1 &4729192941930626716
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3329633866275703827}
-  - component: {fileID: 505477291504179839}
-  - component: {fileID: 2698243021137693906}
+  - component: {fileID: 4091675252587072063}
+  m_Layer: 0
+  m_Name: Respawn Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4091675252587072063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4729192941930626716}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.078459114, z: -0, w: 0.99691737}
+  m_LocalPosition: {x: 0.008401008, y: 6.925, z: -0.026480224}
+  m_LocalScale: {x: 0.04, y: 1, z: 0.04}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3996373118699998964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5053826103777192026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3996373118699998964}
+  - component: {fileID: 5916200393476361288}
+  - component: {fileID: 109066950465436218}
   m_Layer: 0
   m_Name: InfiniteDrop
   m_TagString: Untagged
@@ -18,28 +49,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3329633866275703827
+--- !u!4 &3996373118699998964
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6272644325334654650}
+  m_GameObject: {fileID: 5053826103777192026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.42, z: 0}
   m_LocalScale: {x: 25, y: 1, z: 25}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4091675252587072063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &505477291504179839
+--- !u!65 &5916200393476361288
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6272644325334654650}
+  m_GameObject: {fileID: 5053826103777192026}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -54,17 +86,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2698243021137693906
+--- !u!114 &109066950465436218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6272644325334654650}
+  m_GameObject: {fileID: 5053826103777192026}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d876def4a58b5e14697a917f754fef94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fallDamage: 2.5
-  resetPosition: {x: -0.17, y: 7.35, z: 1.6}
+  respawnPositionReference: {fileID: 4729192941930626716}

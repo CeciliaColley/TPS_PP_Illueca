@@ -86,7 +86,6 @@ public class LevelManager : MonoBehaviour
         {
             foreach (string scene in level1Scenes)
             {
-                Debug.Log("New Level Scenes: " + scene);
                 if (!level2Scenes.Contains(scene))
                 {
                     listOfScenes.Add(scene);

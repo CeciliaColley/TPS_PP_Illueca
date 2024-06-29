@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
     private static float _playerLife;
+    private static string _playerPrompt;
 
     private float maxLife;
     private float maxPlayerHearts = 3;
@@ -25,6 +26,18 @@ public class Player : MonoBehaviour
     }
 
     public static event Action<float> OnPlayerLivesChanged;
+
+    public static string PlayerPrompt
+    {
+        get => _playerPrompt;
+        set
+        {
+            _playerPrompt = value;
+            OnPromptPlayer?.Invoke(_playerPrompt);
+        }
+    }
+
+    public static event Action<string> OnPromptPlayer;
 
     private void Awake()
     {
