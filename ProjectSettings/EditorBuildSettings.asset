@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Boot.unity
     guid: e0548aae0a95993488fd0f63fa8bda6d
   - enabled: 1
@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI.unity
     guid: bfa4a91e4a4b5564d88bf2d7953af8e1
+  - enabled: 1
+    path: Assets/Scenes/Shamba.unity
+    guid: b05254fcb383f7d46b416aeb7a6d99fb
+  - enabled: 1
+    path: Assets/Scenes/Cooking.unity
+    guid: 98afb752a39de7d4589b538b0737fd57
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

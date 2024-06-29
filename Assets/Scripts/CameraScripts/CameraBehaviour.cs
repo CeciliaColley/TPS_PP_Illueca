@@ -7,13 +7,67 @@ using UnityEngine.InputSystem;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    [Tooltip("The seconds b")]
+    [Header("Variables for a camera spin")]
+    [Tooltip("The seconds befor the sping begins")]
     [SerializeField] private float spinStartDelay = 1.0f;
     [Tooltip("The seconds between the spin ending, and the invocation of the 'OnSpinEnd' events.")]
     [SerializeField] private float spinEndDelay = 2.0f;
-    protected CinemachineVirtualCamera _camera;
     protected Action SpinComplete;
 
+    [Header("Variables for a wait then switch camera")]
+    [Tooltip("The second the camera should wait before switching")]
+    [SerializeField] private float activeTime = 4.0f;
+    [Tooltip("The sIndex of the camera to switch to in the camera manager camera's list.")]
+    [SerializeField] private int nextCameraIndex = 1;
+
+    [Header("Variables for a look at for seconds")]
+    [Tooltip("The game object to look at")]
+    [SerializeField] private GameObject newLookAt;
+    [Tooltip("The amount of time to look at the game object")]
+    [SerializeField] private float lookTime;
+    [Tooltip("The amount of time to look at the game object")]
+    [SerializeField] private float lookDelay;
+    protected Action LookComplete;
+
+    protected CinemachineVirtualCamera _camera;
+    private void Awake()
+    {
+        if (TryGetComponent(out CinemachineVirtualCamera camera))
+        {
+            _camera = camera;
+        }
+        else
+        {
+            Debug.LogWarning("CinemachineVirtualCamera component not found on this GameObject.");
+        }
+    }
+
+    protected IEnumerator LookAtForSeconds()
+    {
+        yield return new WaitForSeconds(lookDelay);
+        Transform originaLookAt = _camera.LookAt;
+        _camera.LookAt = newLookAt.transform;
+        yield return new WaitForSeconds(lookTime);
+        _camera.LookAt = originaLookAt;
+        OnLookComplete();
+    }
+    private void OnLookComplete()
+    {
+        LookComplete?.Invoke();
+    }
+
+    protected IEnumerator WaitThenSwitch()
+    {
+        yield return new WaitForSeconds(activeTime);
+        if (CameraManager.Instance != null)
+        {
+            CameraManager.Instance.SwitchCamera(nextCameraIndex);
+        }
+        else
+        {
+            Debug.LogError("The camera didn't switch to the next camera because there is no instance of camera manager.");
+        }
+    }
 
     protected IEnumerator FullSpin(float speed)
     {

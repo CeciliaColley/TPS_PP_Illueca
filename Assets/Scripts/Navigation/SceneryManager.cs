@@ -62,8 +62,8 @@ public class SceneryManager : MonoBehaviour
 
         if (loadingBarFill.fillAmount >= 1)
         {
-            LevelManager.Instance.LevelLoaded = true;
             DisableLoadScreen();
+            LevelManager.Instance.LevelLoaded = true;
         }
     }
 
