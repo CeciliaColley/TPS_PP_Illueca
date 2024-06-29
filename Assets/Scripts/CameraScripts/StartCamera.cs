@@ -23,6 +23,7 @@ public class StartCamera : Camera
     private void OnEnable()
     {
         SpinComplete += OnSpinCompleteHandler;
+        LevelManager.Instance.LevelLoadedEvent += OnLevelLoaded;
     }
 
     private void OnDisable()
@@ -30,7 +31,13 @@ public class StartCamera : Camera
         SpinComplete -= OnSpinCompleteHandler;
     }
 
-    private void Start()
+    private void OnLevelLoaded()
+    {
+        Spin();
+        LevelManager.Instance.LevelLoadedEvent -= OnLevelLoaded;
+    }
+
+    private void Spin()
     {
         StartCoroutine(FullSpin(spinSpeed));
     }
