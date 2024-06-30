@@ -27,7 +27,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
     }
 
     private void Update() {
-        if (Player.HasGun)
+        if (Player.HasGun && Gun.Ammo > 0)
         {
             Vector3 mouseWorldPosition = Vector3.zero;
 

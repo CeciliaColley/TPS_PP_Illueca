@@ -197,7 +197,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1265,7 +1266,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1989,7 +1991,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3125,7 +3128,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4356,7 +4360,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 125058917}
   m_Follow: {fileID: 0}
@@ -4405,7 +4409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinStartDelay: 1
   spinEndDelay: 2
-  activeTime: 4
+  activeTime: 2
   nextCameraIndex: 2
   newLookAt: {fileID: 0}
   lookTime: 0
@@ -5383,7 +5387,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5699,7 +5704,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5951,7 +5957,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6166,7 +6173,7 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -6261,7 +6268,7 @@ PrefabInstance:
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: CameraSide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -6650,7 +6657,7 @@ PrefabInstance:
     - target: {fileID: 3996373118699998964, guid: 0fb9d90d7619c34478a03e5504f79739,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2.94
       objectReference: {fileID: 0}
     - target: {fileID: 3996373118699998964, guid: 0fb9d90d7619c34478a03e5504f79739,
         type: 3}
@@ -7032,6 +7039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401347609}
+  - component: {fileID: 1401347610}
   m_Layer: 0
   m_Name: Prompters
   m_TagString: Untagged
@@ -7056,6 +7064,19 @@ Transform:
   - {fileID: 1016710952}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1401347610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401347608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7fdc86b362e684b8b3179c369fbbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puddlePrompt: {fileID: 1456203530}
 --- !u!1 &1438143849
 GameObject:
   m_ObjectHideFlags: 0
@@ -7143,7 +7164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinStartDelay: 1
   spinEndDelay: 2
-  activeTime: 4
+  activeTime: 2
   nextCameraIndex: 1
   newLookAt: {fileID: 125058915}
   lookTime: 1
@@ -7413,11 +7434,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6214368286276533956, guid: 838323559f06df54b8c0ae79cefe2324,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 838323559f06df54b8c0ae79cefe2324, type: 3}
+--- !u!1 &1456203530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6214368286276533956, guid: 838323559f06df54b8c0ae79cefe2324,
+    type: 3}
+  m_PrefabInstance: {fileID: 1456203529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1464006419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8159,7 +8191,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9397,7 +9430,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9590,7 +9624,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7624221747096429678, guid: 02dd94341ce1eff4f80542c60e87d8e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9629,6 +9664,53 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2540817853737639666, guid: d2fbd635fea34c54cad91db76dda63ac, type: 3}
+--- !u!1 &1984228977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1984228978}
+  - component: {fileID: 1984228979}
+  m_Layer: 0
+  m_Name: Flowers Spawn Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1984228978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984228977}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984228979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984228977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6307980dc98fa2c42ae84fd8a1b0ca0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowers: {fileID: 2064026431}
+  spawnDuration: 3
+  secondsBeforeFollowPlayer: 1
 --- !u!1 &1995926005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66986c843c1a10d4e8569f2cc24ad49f,
@@ -10087,7 +10169,7 @@ Transform:
   m_GameObject: {fileID: 2064026431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13490,6 +13572,7 @@ SceneRoots:
   - {fileID: 1322499051}
   - {fileID: 2070254229}
   - {fileID: 248877247}
+  - {fileID: 1984228978}
   - {fileID: 2064026432}
   - {fileID: 800442351}
   - {fileID: 3893294198117381256}

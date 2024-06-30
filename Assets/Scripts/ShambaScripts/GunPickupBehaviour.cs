@@ -18,6 +18,11 @@ public class GunPickupBehaviour : MonoBehaviour
         Player.OnAcquireGun += PickUpGun;
     }
 
+    private void OnDisable()
+    {
+        Player.OnAcquireGun -= PickUpGun;
+    }
+
     private IEnumerator Spin()
     {
         while (true)
