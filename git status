@@ -1,0 +1,83 @@
+[33mcommit 99965ca13e2175561b4877dcfed38b652a33d14e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sun Jun 30 00:17:44 2024 -0300
+
+    Forgot to save before previous commit
+
+[33mcommit f3c54d1b8eb8e7f102cba62bc6fff8096a134515[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sun Jun 30 00:15:04 2024 -0300
+
+    Added some assets I found, and modified starter assets input to have shoot and aim
+
+[33mcommit 12e1b7ebd82f5b036fc71ed2593543d2d1e331d9[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 20:47:05 2024 -0300
+
+    Building the shamba
+
+[33mcommit 922990d7e9b5cf101efe68eaaa9de9602bdbc09f[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 19:01:59 2024 -0300
+
+    Connected levels to the home level and added speech bubble
+
+[33mcommit 8748b439b3f17d822ab8a5324cb8473d28d6d80f[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 16:11:16 2024 -0300
+
+    Prompt system added.
+
+[33mcommit 4ad8f3fd6d9e0489cc38618f67e38317221adde6[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 14:37:40 2024 -0300
+
+    Player life updates with UI: heart fill value is modified. Infinite drop added.
+
+[33mcommit b3067d519a97f99f81000eb6485a5f007d561ca1[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 02:09:31 2024 -0300
+
+    Main menu added. Additive scene management added. UI level added and displaying player life.
+
+[33mcommit bc2a730ccf729fb604f67137dfc3b76c0c0590cd[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Sat Jun 29 00:12:01 2024 -0300
+
+    Added scene management
+
+[33mcommit 04de70ff6bf0a2730b0cfb6000c6e62fb05f3404[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Fri Jun 28 12:25:00 2024 -0300
+
+    Home level camera set up
+
+[33mcommit e18868e54d1269fce8c5c21616b272545f30f35d[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Fri May 31 15:38:52 2024 -0300
+
+    Added character
+
+[33mcommit 124dd608e4918dd30d8c089dd81c239cd6bf3d40[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Thu May 30 23:38:23 2024 -0300
+
+    Created house interior
+
+[33mcommit 6d31eaeb25a6d921bf7a6e9b8f3086378076b2ea[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Thu May 30 13:04:44 2024 -0300
+
+    Finished pond with my own assets
+
+[33mcommit ee010b31556d565874c37fee0ccd669f1632e267[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Wed May 29 21:29:56 2024 -0300
+
+    Created garden level and a pond.
+
+[33mcommit 7ce9207bc3d0ad42a9edd2857ad7c747b70c6a4b[m[33m ([m[1;32mcameras[m[33m)[m
+Author: CeciliaColley <ceciliagabriellecolley@gmail.com>
+Date:   Thu May 23 16:25:39 2024 -0300
+
+    Home level created
