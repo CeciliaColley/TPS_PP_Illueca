@@ -69,6 +69,13 @@ public class ThirdPersonShooterController : MonoBehaviour {
                 // Hit Scan Shoot
                 if (hitTransform != null)
                 {
+                    BulletTarget bulletTarget = hitTransform.GetComponent<BulletTarget>();
+                    // Decrease life
+                    if (bulletTarget != null)
+                    {
+                        bulletTarget.Life--;
+                        Debug.Log("Applying damage");
+                    }
                     // Hit something
                     Instantiate(waterSplash, mouseWorldPosition, Quaternion.identity);
                 }

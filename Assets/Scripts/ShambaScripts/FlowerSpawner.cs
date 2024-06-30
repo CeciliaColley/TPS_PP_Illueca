@@ -29,7 +29,7 @@ public class FlowerSpawner : MonoBehaviour
     {
         if (flowers == null)
         {
-            Debug.LogError("Flowers not assigned!");
+            Debug.LogWarning("Flowers not assigned!");
             yield break;
         }
 
