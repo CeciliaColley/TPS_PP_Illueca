@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimVirtualCamera: {fileID: 2070925443537820033}
-  normalSensitivity: 2
+  normalSensitivity: 3
   aimSensitivity: 1
   aimColliderLayerMask:
     serializedVersion: 2
@@ -6695,7 +6695,7 @@ PrefabInstance:
     - target: {fileID: 4091675252587072063, guid: 0fb9d90d7619c34478a03e5504f79739,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.9
+      value: 10.28
       objectReference: {fileID: 0}
     - target: {fileID: 5053826103777192026, guid: 0fb9d90d7619c34478a03e5504f79739,
         type: 3}
@@ -9653,7 +9653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d8f31c975486d4fb65189ba045d0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 10
 --- !u!1001 &2001061007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10412,7 +10411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &2115071004
 MeshRenderer:
   m_ObjectHideFlags: 0

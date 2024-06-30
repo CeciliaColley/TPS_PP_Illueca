@@ -6,14 +6,7 @@ public class ShambaStartCamera : CameraBehaviour
 {
     private void Start()
     {
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.LevelLoadedEvent += OnLevelLoaded;
-        }
-        else
-        {
-            SwitchCamera();
-        }
+        SwitchCamera();
     }
 
     private void OnLevelLoaded()

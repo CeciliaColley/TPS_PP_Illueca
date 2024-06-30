@@ -7740,7 +7740,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinStartDelay: 1
   spinEndDelay: 0
-  switchCameraIndex: 1
+  activeTime: 0.1
+  nextCameraIndex: 1
+  newLookAt: {fileID: 0}
+  lookTime: 0
+  lookDelay: 0
   SpinSpeed: 50
 --- !u!1001 &673779411
 PrefabInstance:
@@ -11216,8 +11220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73ce7ad6ef01d64a8f2b746d3c01f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spinStartDelay: 1
+  spinEndDelay: 2
   activeTime: 4
   nextCameraIndex: 1
+  newLookAt: {fileID: 0}
+  lookTime: 0
+  lookDelay: 0
   dialogueLine: This rickety bridge looks dangerous...
 --- !u!1001 &1045039744
 PrefabInstance:

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public static float maxAmmo;
-    private float _ammo;
+    public static float maxAmmo = 15;
+    private static float _ammo;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
 
     public static Action<float> AmmoChange;
 
-    public float Ammo
+    public static float Ammo
     {
         get { return _ammo; }
         set

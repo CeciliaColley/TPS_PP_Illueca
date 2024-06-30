@@ -8,7 +8,7 @@ public class AmmoBarBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject AmmoBar;
     [SerializeField ]private Image ammoBarImage;
-    [SerializeField] private float duration = 0.5f;
+    [SerializeField] private float duration = 0.2f;
 
     private Coroutine fillCoroutine;
 
