@@ -20,7 +20,9 @@ public class ThirdPersonShooterController : MonoBehaviour {
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
 
-    private void Awake() {
+    private void Awake() 
+    {
+
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
@@ -34,11 +36,13 @@ public class ThirdPersonShooterController : MonoBehaviour {
             Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
             Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
             Transform hitTransform = null;
+            RaycastHit hit;
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
             {
                 debugTransform.position = raycastHit.point;
                 mouseWorldPosition = raycastHit.point;
                 hitTransform = raycastHit.transform;
+                hit = raycastHit;
             }
 
             if (starterAssetsInputs.aim)

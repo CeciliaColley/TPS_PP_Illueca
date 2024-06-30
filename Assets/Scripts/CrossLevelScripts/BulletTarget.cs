@@ -20,6 +20,7 @@ public class BulletTarget : MonoBehaviour
         set 
         { 
             _life = value;
+            Debug.Log(value);
             LifeChanged?.Invoke(value);
             Debug.Log("Invoking life changed");
         }

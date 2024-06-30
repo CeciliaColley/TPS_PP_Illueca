@@ -40,29 +40,30 @@ public class EnemyLifeBar : MonoBehaviour
     private void OnEnemyLifeChange(float life)
     {
         Debug.Log("On enemy life changes is invoked.");
-        lastLifeChangeTime = Time.time; // Update the time of the last life change
-        LifeBar.SetActive(true);
+        lastLifeChangeTime = Time.time;
 
-        if (lifeBarImage == null)
+        if (lifeBarImage == null || LifeBar == null)
             return;
 
-        SetAlpha(1);
-
-        if (fillCoroutine != null)
-            StopCoroutine(fillCoroutine);
-
-        fillCoroutine = StartCoroutine(UpdateAmmoBarFill(life / BulletTarget.maxLife));
-
-        // Reset any ongoing fade-out since life changed
+        LifeBar.SetActive(true);
         if (fadeOutCoroutine != null)
         {
             StopCoroutine(fadeOutCoroutine);
             fadeOutCoroutine = null;
-            ResetAlpha(); // Reset the alpha to be fully visible
         }
+        ResetAlpha();
+
+        if (fillCoroutine != null)
+        {
+            StopCoroutine(fillCoroutine);
+        }
+
+        Debug.Log("Fill amount: " + (life / BulletTarget.maxLife));
+        fillCoroutine = StartCoroutine(UpdateEnemyLifeFillBar(life / BulletTarget.maxLife));
+        
     }
 
-    private IEnumerator UpdateAmmoBarFill(float targetFillAmount)
+    private IEnumerator UpdateEnemyLifeFillBar(float targetFillAmount)
     {
         float elapsedTime = 0f;
         float startFillAmount = lifeBarImage.fillAmount;
@@ -70,7 +71,7 @@ public class EnemyLifeBar : MonoBehaviour
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            lifeBarImage.fillAmount = Mathf.Lerp(startFillAmount, targetFillAmount, elapsedTime / duration);
+            lifeBarImage.fillAmount = Mathf.Lerp(startFillAmount, (startFillAmount - targetFillAmount), elapsedTime / duration);
             yield return null;
         }
 
@@ -103,6 +104,7 @@ public class EnemyLifeBar : MonoBehaviour
         Image lifeBarBackground = LifeBar.GetComponent<Image>();
         if (lifeBarBackground != null)
         {
+            newColor = new Color(lifeBarBackground.color.r, lifeBarBackground.color.g, lifeBarBackground.color.b, alpha);
             lifeBarBackground.color = newColor;
         }
     }
