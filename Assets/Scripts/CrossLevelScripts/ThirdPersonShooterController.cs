@@ -14,8 +14,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
-    [SerializeField] private Transform vfxHitGreen;
-    [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private Transform waterSplash;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -59,24 +58,17 @@ public class ThirdPersonShooterController : MonoBehaviour {
 
 
         if (starterAssetsInputs.shoot) {
-            /*
+            
             // Hit Scan Shoot
             if (hitTransform != null) {
                 // Hit something
-                if (hitTransform.GetComponent<BulletTarget>() != null) {
-                    // Hit target
-                    Instantiate(vfxHitGreen, mouseWorldPosition, Quaternion.identity);
-                } else {
-                    // Hit something else
-                    Instantiate(vfxHitRed, mouseWorldPosition, Quaternion.identity);
-                }
+                Instantiate(waterSplash, mouseWorldPosition, Quaternion.identity);
             }
-            //*/
-            //*
-            // Projectile Shoot
-            Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-            //*/
+
+            //// Projectile Shoot: does not work well.
+            //Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+            //Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+
             starterAssetsInputs.shoot = false;
         }
 

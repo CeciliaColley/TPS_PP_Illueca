@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class BulletProjectile : MonoBehaviour {
 
-    [SerializeField] private Transform vfxHitGreen;
-    [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private Transform waterSplash;
+    [SerializeField] private float speed = 50f;
 
     private Rigidbody bulletRigidbody;
 
-    private void Awake() {
+    private void Awake() 
+    {
         bulletRigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start() {
-        float speed = 50f;
+    private void Start() 
+    {
         bulletRigidbody.velocity = transform.forward * speed;
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.GetComponent<BulletTarget>() != null) {
-            // Hit target
-            Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
-        } else {
-            // Hit something else
-            Instantiate(vfxHitRed, transform.position, Quaternion.identity);
-        }
+    private void OnTriggerEnter(Collider other) 
+    {
+        Instantiate(waterSplash, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
