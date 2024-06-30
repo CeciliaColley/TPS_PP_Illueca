@@ -10,11 +10,11 @@ public class HomeInput : MonoBehaviour
     [SerializeField] private string houseLevelName = "House";
     [SerializeField] private int bridgeCameraIndex = 2;
     
-    private HomeInputAsset actionAsset;
+    private FollowPromptInput actionAsset;
 
     private void Awake()
     {
-        actionAsset = new HomeInputAsset();
+        actionAsset = new FollowPromptInput();
     }
 
     void OnEnable()
@@ -26,7 +26,7 @@ public class HomeInput : MonoBehaviour
     void OnDisable()
     {
         actionAsset.Disable();
-        actionAsset.Home.FollowPrompt.performed += OnFollowPrompt;
+        actionAsset.Home.FollowPrompt.performed -= OnFollowPrompt;
     }
 
     private void OnFollowPrompt(InputAction.CallbackContext context)

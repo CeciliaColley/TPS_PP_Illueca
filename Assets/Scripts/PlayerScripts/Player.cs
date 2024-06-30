@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private static float _playerLife;
     private static string _playerPrompt;
     private static string _playerSpeech;
+    private static bool _hasGun = false;
 
 
     private float maxLife;
@@ -54,6 +55,18 @@ public class Player : MonoBehaviour
 
     public static event Action<string> OnPlayerSpeech;
 
+    public static bool HasGun
+    {
+        get => _hasGun;
+        set
+        {
+            _hasGun = value;
+            OnAcquireGun?.Invoke(_hasGun);
+        }
+    }
+
+    public static event Action<bool> OnAcquireGun;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -89,5 +102,7 @@ public enum PlayerPrompts
     GOTOGARDEN,
     GOTOHOUSE,
     INSPECTBRIDGE,
+    PICKUPGUN,
+    PUDDLERELOAD,
     DEFAULT
 }

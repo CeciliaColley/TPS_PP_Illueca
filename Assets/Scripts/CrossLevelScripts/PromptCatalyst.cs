@@ -17,7 +17,7 @@ public class PromptCatalyst : MonoBehaviour
         }
         else
         {
-            Debug.LogError("The prompt didn't display because the trigger was not tagged as a Player.");
+            Debug.Log("The prompt didn't display because the trigger was not tagged as a Player.");
         }
     }
 
@@ -29,7 +29,7 @@ public class PromptCatalyst : MonoBehaviour
         }
         else
         {
-            Debug.LogError("The prompt wasn't reset because the trigger was not tagged as a Player.");
+            Debug.Log("The prompt wasn't reset because the trigger was not tagged as a Player.");
         }
     }
 }

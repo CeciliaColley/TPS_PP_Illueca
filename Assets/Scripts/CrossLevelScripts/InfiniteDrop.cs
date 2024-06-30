@@ -16,7 +16,7 @@ public class InfiniteDrop : MonoBehaviour
         }
         else
         {
-            Debug.LogError("The infinite drop didn't work because the object that triggered the collider either didn't have a collider, wasn't tagged as player, or the game object for the respawn position reference wasn't assigned.");
+            Debug.Log("The infinite drop didn't work because the object that triggered the collider either didn't have a collider, wasn't tagged as player, or the game object for the respawn position reference wasn't assigned.");
         }
     }
 

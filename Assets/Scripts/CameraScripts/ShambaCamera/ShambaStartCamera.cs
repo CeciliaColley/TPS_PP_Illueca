@@ -14,7 +14,6 @@ public class ShambaStartCamera : CameraBehaviour
         {
             SwitchCamera();
         }
-        Debug.Log("StartCamera");
     }
 
     private void OnLevelLoaded()

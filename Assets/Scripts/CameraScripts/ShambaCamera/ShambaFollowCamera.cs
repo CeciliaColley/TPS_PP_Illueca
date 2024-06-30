@@ -9,7 +9,6 @@ public class ShambaFollowCamera : CameraBehaviour
 
     public void SetBlendTime()
     {
-        Debug.Log("FollowCamera");
         if (cineBrain != null)
         {
             cineBrain.m_DefaultBlend.m_Time = blendTime;

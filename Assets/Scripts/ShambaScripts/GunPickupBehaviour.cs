@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunBehaviour : MonoBehaviour
+public class GunPickupBehaviour : MonoBehaviour
 {
     [Tooltip("Rotation speed in degrees per second")]
     [SerializeField] private float rotationSpeed = 90.0f;
+    [Tooltip("The gun in the player's hand")]
+    [SerializeField] private GameObject playersGun;
+    [Tooltip("The prompter to pick up the gun.")]
+    [SerializeField] private GameObject prompter;
 
-    // Start is called before the first frame update
+
     void OnEnable()
     {
         StartCoroutine(Spin());
+        Player.OnAcquireGun += PickUpGun;
     }
 
     private IEnumerator Spin()
@@ -22,9 +27,11 @@ public class GunBehaviour : MonoBehaviour
         }
     }
 
-    public void PickUpGun()
+    public void PickUpGun(bool hasGun)
     {
+        playersGun.SetActive(hasGun);
         StopCoroutine(Spin());
-        gameObject.SetActive(false);
+        Destroy(prompter);
+        Destroy(gameObject);
     }
 }
