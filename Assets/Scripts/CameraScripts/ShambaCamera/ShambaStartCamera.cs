@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShambaStartCamera : CameraBehaviour
 {
-    private void OnEnable()
+    private void Start()
     {
         if (LevelManager.Instance != null)
         {
@@ -12,28 +12,13 @@ public class ShambaStartCamera : CameraBehaviour
         }
         else
         {
-            FocusGun();
+            SwitchCamera();
         }
+        Debug.Log("StartCamera");
     }
 
     private void OnLevelLoaded()
     {
-        FocusGun();
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.LevelLoadedEvent -= OnLevelLoaded;
-        }
-    }
-
-    private void FocusGun()
-    {
-        LookComplete += OnLookCompleteHandler;
-        StartCoroutine(LookAtForSeconds());
-    }
-
-    private void OnLookCompleteHandler()
-    {
-        StartCoroutine(WaitThenSwitch());
-        LookComplete -= OnLookCompleteHandler;
+        SwitchCamera();
     }
 }

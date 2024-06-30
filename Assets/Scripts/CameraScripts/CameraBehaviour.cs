@@ -17,8 +17,8 @@ public class CameraBehaviour : MonoBehaviour
     [Header("Variables for a wait then switch camera")]
     [Tooltip("The second the camera should wait before switching")]
     [SerializeField] private float activeTime = 4.0f;
-    [Tooltip("The sIndex of the camera to switch to in the camera manager camera's list.")]
-    [SerializeField] private int nextCameraIndex = 1;
+    [Tooltip("The index of the camera to switch to in the camera manager camera's list.")]
+    [SerializeField] protected int nextCameraIndex = 1;
 
     [Header("Variables for a look at for seconds")]
     [Tooltip("The game object to look at")]
@@ -28,6 +28,9 @@ public class CameraBehaviour : MonoBehaviour
     [Tooltip("The amount of time to look at the game object")]
     [SerializeField] private float lookDelay;
     protected Action LookComplete;
+
+    protected Camera _mainCam;
+    protected Cinemachine.CinemachineBrain cineBrain;
 
     protected CinemachineVirtualCamera _camera;
     private void Awake()
@@ -39,6 +42,11 @@ public class CameraBehaviour : MonoBehaviour
         else
         {
             Debug.LogWarning("CinemachineVirtualCamera component not found on this GameObject.");
+        }
+        _mainCam = Camera.main;
+        if (_mainCam != null)
+        {
+            cineBrain = _mainCam.GetComponent<Cinemachine.CinemachineBrain>();
         }
     }
 
@@ -115,11 +123,17 @@ public class CameraBehaviour : MonoBehaviour
         SpinComplete?.Invoke();
     }
 
-    protected void SwitchCamera(int switchCameraIndex)
+    protected void SwitchCamera()
     {
+        StartCoroutine(SwitchCameraCoroutine());
+    }
+
+    private IEnumerator SwitchCameraCoroutine()
+    {
+        yield return new WaitForSeconds(activeTime);
         if (CameraManager.Instance != null)
         {
-            CameraManager.Instance.SwitchCamera(switchCameraIndex);
+            CameraManager.Instance.SwitchCamera(nextCameraIndex);
         }
     }
 }

@@ -21,10 +21,6 @@ public class CameraManager : MonoBehaviour
         {
             Instance = this;
         }
-    }
-
-    private void Start()
-    {
         InitializeCameras();
     }
 

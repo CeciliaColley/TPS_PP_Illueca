@@ -5,8 +5,6 @@ using Unity.VisualScripting;
 
 public class HomeStartCamera : CameraBehaviour
 {
-    [Tooltip("The index of the camera in the camera manager 'cameras' list that you want to switch to.")]
-    [SerializeField] private int switchCameraIndex;
     [Tooltip("The minimum speed for the spin.")]
     [SerializeField] private float SpinSpeed = 1.0f;
 
@@ -44,6 +42,6 @@ public class HomeStartCamera : CameraBehaviour
 
     private void OnSpinCompleteHandler()
     {
-        SwitchCamera(switchCameraIndex);
+        SwitchCamera();
     }
 }
