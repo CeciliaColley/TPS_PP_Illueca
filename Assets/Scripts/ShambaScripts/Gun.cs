@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] private float maxAmmo;
+    public static float maxAmmo;
     private float _ammo;
 
     private void Awake()
@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
         _ammo = maxAmmo;
     }
 
-    public Action<float> AmmoChange;
+    public static Action<float> AmmoChange;
 
     public float Ammo
     {
