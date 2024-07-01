@@ -6,6 +6,8 @@ public class FlowerMonitor : MonoBehaviour
 {
     [SerializeField] private string HomeLevelName = "Home";
 
+    private bool handlingNoMoreTargets = false;
+
     private void Update()
     {
         CheckForBulletTargets();
@@ -27,8 +29,9 @@ public class FlowerMonitor : MonoBehaviour
         {
             Player.Instance.hasWatered = true;
         }
-        if (LevelManager.Instance != null)
+        if ( !handlingNoMoreTargets &&  LevelManager.Instance != null)
         {
+            handlingNoMoreTargets = true;
             LevelManager.Instance.ChangeLevel(HomeLevelName);
         }
     }
