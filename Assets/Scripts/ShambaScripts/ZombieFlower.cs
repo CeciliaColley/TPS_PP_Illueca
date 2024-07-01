@@ -7,12 +7,14 @@ public class ZombieFlower : BulletTarget
 {
     [SerializeField] FlowerMonitor flowerMonitor;
     [SerializeField] private float _maxLife = 3.0f;
+    [SerializeField] private Transform happyFlowerParent;
     [SerializeField] private GameObject happyFlower;
     [SerializeField] private GameObject health;
     [SerializeField] private float damage = 2.0f;
     [SerializeField] private float damageInterval = 2.0f;
     [SerializeField] private float healthDropPercentage = 2;
     [SerializeField] private Vector3 healthDropOffset;
+
 
     private NavMeshAgent agent;
     private ThirdPersonShooterController player;
@@ -84,7 +86,8 @@ public class ZombieFlower : BulletTarget
     {
         if (happyFlower != null)
         {
-            Instantiate(happyFlower, transform.position, transform.rotation);
+            GameObject newHappyFlower = Instantiate(happyFlower, transform.position, transform.rotation);
+            newHappyFlower.transform.SetParent(happyFlowerParent, false);
             Destroy(gameObject);
         }
     }

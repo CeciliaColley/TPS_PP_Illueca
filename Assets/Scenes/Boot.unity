@@ -289,6 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff96c19d801f68e46814b7e3348509a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  houseLevelName: House
+  hasWatered: 0
 --- !u!4 &521840668
 Transform:
   m_ObjectHideFlags: 0

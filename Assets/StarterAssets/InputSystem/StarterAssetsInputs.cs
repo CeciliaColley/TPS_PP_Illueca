@@ -14,6 +14,8 @@ namespace StarterAssets
 		public bool sprint;
 		public bool aim;
         public bool shoot;
+		public bool exit;
+        private bool exitPressed;
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -54,6 +56,11 @@ namespace StarterAssets
         {
             ShootInput(value.isPressed);
         }
+
+        public void OnExit(InputValue value)
+        {
+            ExitInput(value.isPressed);
+        }
 #endif
 
 
@@ -83,6 +90,20 @@ namespace StarterAssets
         public void ShootInput(bool newShootState)
         {
             shoot = newShootState;
+        }
+
+        public void ExitInput(bool newExitState)
+        {
+            if (newExitState && !exitPressed)
+            {
+                exit = true;
+                exitPressed = true;
+            }
+            else if (!newExitState)
+            {
+                exit = false;
+                exitPressed = false;
+            }
         }
 
         private void OnApplicationFocus(bool hasFocus)

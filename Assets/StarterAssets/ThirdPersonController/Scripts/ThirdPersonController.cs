@@ -164,6 +164,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            CheckExitInput();
         }
 
         private void LateUpdate()
@@ -405,6 +406,21 @@ namespace StarterAssets
         public void SetRotateOnMove(bool value)
         {
             _rotateOnMove = value;
+        }
+
+        private void CheckExitInput()
+        {
+            if (_input.exit)
+            {
+                if (_input.exit)
+                {
+                    if (LevelManager.Instance != null)
+                    {
+                        LevelManager.Instance.ChangeLevel("MainMenu");
+                    }
+                }
+                _input.exit = false;
+            }
         }
     }
 }

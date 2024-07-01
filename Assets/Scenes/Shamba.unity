@@ -419,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -1704,6 +1705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -2647,6 +2649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -4009,6 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -5298,6 +5302,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1438143851}
+  - {fileID: 1570687607}
   - {fileID: 909242104}
   - {fileID: 386186924}
   - {fileID: 2070925443537820032}
@@ -5330,7 +5335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909242103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.418275, y: -0.40800473, z: 0.21834365, w: 0.78160363}
+  m_LocalRotation: {x: 0.11630816, y: -0.4348333, z: 0.056751296, w: 0.8911632}
   m_LocalPosition: {x: -3.89, y: 3.41, z: -4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5356,7 +5361,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 0
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1551412997}
+  m_LookAt: {fileID: 1570687607}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
@@ -6608,6 +6613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -7142,6 +7148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -7149,6 +7156,73 @@ MonoBehaviour:
   damageInterval: 2
   healthDropPercentage: 2
   healthDropOffset: {x: 0.3, y: 1, z: 0.3}
+--- !u!1 &1203770075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203770078}
+  - component: {fileID: 1203770077}
+  - component: {fileID: 1203770076}
+  m_Layer: 0
+  m_Name: EndLevelCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1203770076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203770075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129b12bb445e5834985cf062c60ebfa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: Home
+--- !u!65 &1203770077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203770075}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1203770078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203770075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.18, y: -0.84, z: 0.6}
+  m_LocalScale: {x: 25.17, y: 1, z: 24.37}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209581765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7612,6 +7686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -9559,6 +9634,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1551412996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1570687606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570687607}
+  m_Layer: 0
+  m_Name: Gun Camera Look At
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570687607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570687606}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.76, y: 2.78, z: -3.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870648621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1575986224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10062,6 +10168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -10287,6 +10394,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1682057305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700346944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700346945}
+  m_Layer: 0
+  m_Name: Happy Flowers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700346945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700346944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1705766246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11518,6 +11656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -11929,6 +12068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flowerMonitor: {fileID: 2064026433}
   _maxLife: 3
+  happyFlowerParent: {fileID: 1700346945}
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
   health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
@@ -12511,7 +12651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f150d0ee8110464a856c3dd711b63b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HomeLevelName: Home
+  endLevelPrompt: Jump off when you're ready to go home.
+  endLevelCollider: {fileID: 1203770075}
 --- !u!1001 &2070254229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16056,3 +16197,5 @@ SceneRoots:
   - {fileID: 1401347609}
   - {fileID: 1311332233}
   - {fileID: 794753886}
+  - {fileID: 1700346945}
+  - {fileID: 1203770078}

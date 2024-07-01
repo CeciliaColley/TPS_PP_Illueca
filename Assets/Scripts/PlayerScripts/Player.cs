@@ -139,5 +139,6 @@ public enum PlayerPrompts
     PICKUPGUN,
     PUDDLERELOAD,
     PICKUPHEALTH,
+    EXITHOUSE,
     DEFAULT
 }

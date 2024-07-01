@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class FlowerMonitor : MonoBehaviour
 {
-    [SerializeField] private string HomeLevelName = "Home";
-
-    private bool handlingNoMoreTargets = false;
+    [SerializeField] private string endLevelPrompt = "Jump off when you're ready to go home.";
+    [SerializeField] private GameObject endLevelCollider;
 
     private void Update()
     {
@@ -25,14 +24,8 @@ public class FlowerMonitor : MonoBehaviour
 
     private void OnNoMoreTargets()
     {
-        if (Player.Instance != null)
-        {
-            Player.Instance.hasWatered = true;
-        }
-        if ( !handlingNoMoreTargets &&  LevelManager.Instance != null)
-        {
-            handlingNoMoreTargets = true;
-            LevelManager.Instance.ChangeLevel(HomeLevelName);
-        }
+        Player.Instance.hasWatered = true;
+        Player.PlayerPrompt = endLevelPrompt;
+        endLevelCollider.SetActive(true);
     }
 }

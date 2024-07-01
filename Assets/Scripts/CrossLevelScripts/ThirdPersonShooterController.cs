@@ -26,6 +26,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
+    private EffectsAudioManager effectsAudioManager; // Add reference to EffectsAudioManager
 
     public bool EnemyDetected
     {
@@ -45,6 +46,15 @@ public class ThirdPersonShooterController : MonoBehaviour {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Start()
+    {
+        if (AudioManager.Instance != null)
+        {
+            GameObject audioManager = AudioManager.Instance.gameObject;
+            effectsAudioManager = audioManager.GetComponentInChildren<EffectsAudioManager>();
+        }
     }
 
     private void Update() {
@@ -89,6 +99,12 @@ public class ThirdPersonShooterController : MonoBehaviour {
             if (Gun.Ammo > 0)
             {
                 Gun.Ammo--;
+                
+                if (effectsAudioManager != null)
+                {
+                    effectsAudioManager.PlayShootingSound();
+                }
+                
                 // Hit Scan Shoot
                 if (hitTransform != null)
                 {
