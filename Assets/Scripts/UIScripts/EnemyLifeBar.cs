@@ -14,6 +14,7 @@ public class EnemyLifeBar : MonoBehaviour
     private Coroutine fillCoroutine;
     private Coroutine fadeOutCoroutine;
     private float lastLifeChangeTime;
+    public static BulletTarget currentTarget;
 
     private void OnEnable()
     {
@@ -39,7 +40,6 @@ public class EnemyLifeBar : MonoBehaviour
 
     private void OnEnemyLifeChange(float life)
     {
-        Debug.Log("On enemy life changes is invoked.");
         lastLifeChangeTime = Time.time;
 
         if (lifeBarImage == null || LifeBar == null)
@@ -58,8 +58,7 @@ public class EnemyLifeBar : MonoBehaviour
             StopCoroutine(fillCoroutine);
         }
 
-        Debug.Log("Fill amount: " + (life / BulletTarget.maxLife));
-        fillCoroutine = StartCoroutine(UpdateEnemyLifeFillBar(life / BulletTarget.maxLife));
+        fillCoroutine = StartCoroutine(UpdateEnemyLifeFillBar(life / currentTarget.MaxLife));
         
     }
 

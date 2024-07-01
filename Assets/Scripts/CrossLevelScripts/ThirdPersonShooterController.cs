@@ -77,8 +77,8 @@ public class ThirdPersonShooterController : MonoBehaviour {
                     // Decrease life
                     if (bulletTarget != null)
                     {
+                        EnemyLifeBar.currentTarget = bulletTarget;
                         bulletTarget.Life--;
-                        Debug.Log("Applying damage");
                     }
                     // Hit something
                     Instantiate(waterSplash, mouseWorldPosition, Quaternion.identity);

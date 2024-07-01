@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class BulletTarget : MonoBehaviour
 {
-    public static float maxLife = 3.0f;
+    protected float maxLife = 3.0f;
     private float _life;
 
     private void Awake()
@@ -17,12 +19,25 @@ public class BulletTarget : MonoBehaviour
     public float Life
     {
         get { return _life; }
-        set 
-        { 
+        set
+        {
             _life = value;
-            Debug.Log(value);
+            if (_life <= 0)
+            {
+                _life = 0;
+                Die();
+            }
             LifeChanged?.Invoke(value);
-            Debug.Log("Invoking life changed");
         }
+    }
+    public float MaxLife
+    {
+        get { return maxLife; }
+    }
+
+    protected virtual void Die()
+    {
+        // Throw an exception if not overridden
+        throw new NotImplementedException("Die method not implemented in derived class.");
     }
 }
