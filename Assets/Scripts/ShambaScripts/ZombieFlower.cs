@@ -75,7 +75,6 @@ public class ZombieFlower : BulletTarget
 
     protected override void Die()
     {
-        flowerMonitor.CheckForBulletTargets();
         DropLife();
         SpawnWateredFlower();
     }

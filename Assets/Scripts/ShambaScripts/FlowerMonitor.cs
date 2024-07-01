@@ -5,7 +5,13 @@ using UnityEngine;
 public class FlowerMonitor : MonoBehaviour
 {
     [SerializeField] private string HomeLevelName = "Home";
-    public void CheckForBulletTargets()
+
+    private void Update()
+    {
+        CheckForBulletTargets();
+    }
+
+    private void CheckForBulletTargets()
     {
         BulletTarget[] targets = GetComponentsInChildren<BulletTarget>();
 
