@@ -420,11 +420,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &48647876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,7 +755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ef3b68c586da04ca8e089390b3c486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 90
   playersGun: {fileID: 1995926005}
   prompter: {fileID: 2056182944}
 --- !u!4 &125058917 stripped
@@ -1705,11 +1704,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &291993495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2646,18 +2645,18 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &403739226
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1401347609}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 122977037867327938, guid: 838323559f06df54b8c0ae79cefe2324,
         type: 3}
@@ -2742,7 +2741,7 @@ PrefabInstance:
     - target: {fileID: 6214368286276533956, guid: 838323559f06df54b8c0ae79cefe2324,
         type: 3}
       propertyPath: m_Name
-      value: GunPrompter
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 6214368286276533956, guid: 838323559f06df54b8c0ae79cefe2324,
         type: 3}
@@ -2751,8 +2750,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 122977037867327938, guid: 838323559f06df54b8c0ae79cefe2324,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125058917}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6214368286276533956, guid: 838323559f06df54b8c0ae79cefe2324,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2056182950}
   m_SourcePrefab: {fileID: 100100000, guid: 838323559f06df54b8c0ae79cefe2324, type: 3}
 --- !u!1 &471052147
 GameObject:
@@ -3999,11 +4006,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1 &615248156
 GameObject:
   m_ObjectHideFlags: 3
@@ -4948,57 +4955,57 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2056182947}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.26
+      value: 2.1586206
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.26
+      value: 2.1586206
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.26
+      value: 2.1586206
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.51
+      value: 0.14979142
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.39
+      value: 0.3448276
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.26
+      value: 0.044187672
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9443477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.328949
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66986c843c1a10d4e8569f2cc24ad49f,
         type: 3}
@@ -5200,7 +5207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909242103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19712932, y: -0.3924731, z: 0.0865206, w: 0.8942142}
+  m_LocalRotation: {x: 0.19712935, y: -0.3924731, z: 0.08652062, w: 0.8942142}
   m_LocalPosition: {x: -3.89, y: 3.41, z: -4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6479,11 +6486,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1 &1138865064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7012,11 +7019,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &1209581765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7481,11 +7488,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &1243742539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8577,7 +8584,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2056182947}
   - {fileID: 1016710952}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9931,11 +9937,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &1626361749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11386,11 +11392,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1001 &1960897976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11796,11 +11802,11 @@ MonoBehaviour:
   _maxLife: 3
   happyFlower: {fileID: 5417964098217805686, guid: cb18b02cfda89254faef80202b60c000,
     type: 3}
-  health: {fileID: 6039446138680489810, guid: 30649c8ab28f1c643b3f80791b4e7d02, type: 3}
+  health: {fileID: 4395985091955678562, guid: cdd4a82da0b18f54290e6ef281d31e08, type: 3}
   damage: 2
   damageInterval: 2
   healthDropPercentage: 2
-  healthDropOffset: {x: 1, y: 1, z: 1}
+  healthDropOffset: {x: 0.3, y: 1, z: 0.3}
 --- !u!1 &1979454488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2866621852552652557, guid: d2fbd635fea34c54cad91db76dda63ac,
@@ -12255,6 +12261,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 403739226}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056182950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056182944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf45be57d78d6742a71f2db3ef22342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 90
 --- !u!1 &2062550281
 GameObject:
   m_ObjectHideFlags: 0
@@ -15739,8 +15758,8 @@ SceneRoots:
   - {fileID: 248877247}
   - {fileID: 1984228978}
   - {fileID: 2064026432}
-  - {fileID: 800442351}
   - {fileID: 3893294198117381256}
+  - {fileID: 403739226}
   - {fileID: 2115071006}
   - {fileID: 1935102894}
   - {fileID: 870648621}

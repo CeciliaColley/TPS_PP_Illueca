@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class GardenInput : MonoBehaviour
 {
     [SerializeField] Gun gun;
 
+    public static GameObject pickUp;
     private FollowPromptInput actionAsset;
 
     private void Awake()
@@ -33,9 +35,21 @@ public class GardenInput : MonoBehaviour
         {
             case PlayerPrompts.PICKUPGUN:
                 Player.HasGun = true;
+                Debug.Log("picking up water");
+                if (pickUp != null)
+                {
+                    Destroy(pickUp);
+                }
                 break;
             case PlayerPrompts.PUDDLERELOAD:
                 gun.Refill();
+                break;
+            case PlayerPrompts.PICKUPHEALTH:
+                Debug.Log("Picking up health");
+                if (pickUp != null)
+                {
+                    Destroy(pickUp);
+                };
                 break;
             default:
                 break;

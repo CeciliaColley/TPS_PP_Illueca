@@ -4,6 +4,8 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private string houseLevelName = "House";
+
     public static Player Instance;
     public static PlayerPrompts lastPrompt = PlayerPrompts.DEFAULT;
     private static float _playerLife;
@@ -12,7 +14,7 @@ public class Player : MonoBehaviour
     private static bool _hasGun = false;
 
 
-    private float maxLife;
+    private static float maxLife;
     private float maxPlayerHearts = 3;
     private float lifePerHeart = 10;
 
@@ -24,6 +26,14 @@ public class Player : MonoBehaviour
             if (_playerLife != value)
             {
                 _playerLife = value;
+                if (_playerLife > maxLife)
+                {
+                    _playerLife = maxLife;
+                }
+                if (_playerLife < 0)
+                {
+                    _playerLife = 0;
+                }
                 OnPlayerLivesChanged?.Invoke(_playerLife);
             }
         }
@@ -95,6 +105,15 @@ public class Player : MonoBehaviour
     {
         return lifePerHeart;
     }
+
+    private void Die()
+    {
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.ChangeLevel(houseLevelName);
+        }
+        PlayerLife = 3;
+    }
 }
 
 public enum PlayerPrompts
@@ -104,5 +123,6 @@ public enum PlayerPrompts
     INSPECTBRIDGE,
     PICKUPGUN,
     PUDDLERELOAD,
+    PICKUPHEALTH,
     DEFAULT
 }
