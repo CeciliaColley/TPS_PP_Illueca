@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class ZombieFlower : BulletTarget
 {
+    [SerializeField] FlowerMonitor flowerMonitor;
     [SerializeField] private float _maxLife = 3.0f;
     [SerializeField] private GameObject happyFlower;
     [SerializeField] private GameObject health;
@@ -63,17 +64,18 @@ public class ZombieFlower : BulletTarget
 
     private void OnEnable()
     {
-        FlowerSpawner.Spawned += FollowPlayer;
+        FlowerSpawner.SpawnComplete += FollowPlayer;
 
     }
 
     private void OnDisable()
     {
-        FlowerSpawner.Spawned -= FollowPlayer;
+        FlowerSpawner.SpawnComplete -= FollowPlayer;
     }
 
     protected override void Die()
     {
+        flowerMonitor.CheckForBulletTargets();
         DropLife();
         SpawnWateredFlower();
     }

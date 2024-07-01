@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using StarterAssets;
 using UnityEngine.InputSystem;
+using System;
 
 public class ThirdPersonShooterController : MonoBehaviour {
 
@@ -15,10 +16,27 @@ public class ThirdPersonShooterController : MonoBehaviour {
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
     [SerializeField] private Transform waterSplash;
+    [SerializeField] private string enemyLayerName;
+
+    [HideInInspector]
+    public RaycastHit objectHit;
+    private bool _enemyDetected;
+    public static BulletTarget bulletTarget;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
+
+    public bool EnemyDetected
+    {
+        get { return _enemyDetected; }
+        set 
+        { 
+            _enemyDetected = value; 
+        }
+    }
+
+    public static Action<float> EnemyWasDetected;
 
     private void Awake() 
     {
@@ -26,6 +44,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update() {
@@ -34,11 +53,22 @@ public class ThirdPersonShooterController : MonoBehaviour {
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         Transform hitTransform = null;
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        if (Physics.Raycast(ray, out objectHit, 999f, aimColliderLayerMask))
         {
-            debugTransform.position = raycastHit.point;
-            mouseWorldPosition = raycastHit.point;
-            hitTransform = raycastHit.transform;
+            int enemyLayerIndex = LayerMask.NameToLayer(enemyLayerName);
+            if (objectHit.collider.gameObject.layer == enemyLayerIndex)
+            {
+                bulletTarget = objectHit.transform.GetComponent<BulletTarget>();
+            }
+            else
+            {
+                bulletTarget = null;
+            }
+
+
+            debugTransform.position = objectHit.point;
+            mouseWorldPosition = objectHit.point;
+            hitTransform = objectHit.transform;
         }
 
         if (starterAssetsInputs.aim)
@@ -62,11 +92,10 @@ public class ThirdPersonShooterController : MonoBehaviour {
                 // Hit Scan Shoot
                 if (hitTransform != null)
                 {
-                    BulletTarget bulletTarget = hitTransform.GetComponent<BulletTarget>();
+                    bulletTarget = hitTransform.GetComponent<BulletTarget>();
                     // Decrease life
                     if (bulletTarget != null)
                     {
-                        EnemyLifeBar.currentTarget = bulletTarget;
                         bulletTarget.Life--;
                     }
                     // Hit something

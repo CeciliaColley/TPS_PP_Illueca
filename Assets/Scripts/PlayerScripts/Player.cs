@@ -18,6 +18,18 @@ public class Player : MonoBehaviour
     private float maxPlayerHearts = 3;
     private float lifePerHeart = 10;
 
+    public bool hasWatered = false;
+
+    private void OnEnable()
+    {
+        OnDie += Die;
+    }
+
+    private void OnDisable()
+    {
+        OnDie -= Die;
+    }
+
     public static float PlayerLife
     {
         get => _playerLife;
@@ -30,15 +42,17 @@ public class Player : MonoBehaviour
                 {
                     _playerLife = maxLife;
                 }
-                if (_playerLife < 0)
+                if (_playerLife <= 0)
                 {
-                    _playerLife = 0;
+                    OnDie?.Invoke();
+                    _playerLife = maxLife;
                 }
                 OnPlayerLivesChanged?.Invoke(_playerLife);
             }
         }
     }
 
+    public static event Action OnDie;
     public static event Action<float> OnPlayerLivesChanged;
 
     public static string PlayerPrompt
@@ -106,13 +120,14 @@ public class Player : MonoBehaviour
         return lifePerHeart;
     }
 
+
+
     private void Die()
     {
         if (LevelManager.Instance != null)
         {
             LevelManager.Instance.ChangeLevel(houseLevelName);
         }
-        PlayerLife = 3;
     }
 }
 

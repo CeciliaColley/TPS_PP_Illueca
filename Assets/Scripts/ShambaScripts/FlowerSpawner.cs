@@ -8,7 +8,13 @@ public class FlowerSpawner : MonoBehaviour
     [SerializeField] private GameObject flowers;
     [SerializeField] private float spawnDuration = 3.0f;
     [SerializeField] private float secondsBeforeFollowPlayer = 1.0f;
-    public static Action Spawned;
+    private static bool _spawned = false;
+    public static Action SpawnComplete;
+    
+    public static bool Spawned
+    {
+        get { return _spawned; }
+    }
 
     private void OnEnable()
     {
@@ -52,6 +58,7 @@ public class FlowerSpawner : MonoBehaviour
 
     private void OnSpawnEnded()
     {
-        Spawned?.Invoke();
+        SpawnComplete?.Invoke();
+        _spawned = true;
     }
 }
