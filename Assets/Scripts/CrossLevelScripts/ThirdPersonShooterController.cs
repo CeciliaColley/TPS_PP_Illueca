@@ -29,45 +29,34 @@ public class ThirdPersonShooterController : MonoBehaviour {
     }
 
     private void Update() {
-        if (Player.HasGun && Gun.Ammo > 0)
+        Vector3 mouseWorldPosition = Vector3.zero;
+
+        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        Transform hitTransform = null;
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
-            Vector3 mouseWorldPosition = Vector3.zero;
+            debugTransform.position = raycastHit.point;
+            mouseWorldPosition = raycastHit.point;
+            hitTransform = raycastHit.transform;
+        }
 
-            Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
-            Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-            Transform hitTransform = null;
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        if (starterAssetsInputs.aim)
+        {
+            if (Player.HasGun)
             {
-                debugTransform.position = raycastHit.point;
-                mouseWorldPosition = raycastHit.point;
-                hitTransform = raycastHit.transform;
-                hit = raycastHit;
+                PerformAim(mouseWorldPosition);
             }
-
-            if (starterAssetsInputs.aim)
-            {
-                aimVirtualCamera.gameObject.SetActive(true);
-                thirdPersonController.SetSensitivity(aimSensitivity);
-                thirdPersonController.SetRotateOnMove(false);
-                animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 13f));
-
-                Vector3 worldAimTarget = mouseWorldPosition;
-                worldAimTarget.y = transform.position.y;
-                Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-
-                transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-            }
-            else
-            {
-                aimVirtualCamera.gameObject.SetActive(false);
-                thirdPersonController.SetSensitivity(normalSensitivity);
-                thirdPersonController.SetRotateOnMove(true);
-                animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 13f));
-            }
+        }
+        else
+        {
+            UseFollowCamera();
+        }
 
 
-            if (starterAssetsInputs.shoot)
+        if (starterAssetsInputs.shoot)
+        {
+            if (Gun.Ammo > 0)
             {
                 Gun.Ammo--;
                 // Hit Scan Shoot
@@ -83,14 +72,36 @@ public class ThirdPersonShooterController : MonoBehaviour {
                     // Hit something
                     Instantiate(waterSplash, mouseWorldPosition, Quaternion.identity);
                 }
-
-                //// Projectile Shoot: does not work well.
-                //Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-                //Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-
-                starterAssetsInputs.shoot = false;
             }
+
+
+            //// Projectile Shoot: does not work well.
+            //Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+            //Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+
+            starterAssetsInputs.shoot = false;
         }
     }
 
+    private void PerformAim(Vector3 mouseWorldPosition)
+    {
+        aimVirtualCamera.gameObject.SetActive(true);
+        thirdPersonController.SetSensitivity(aimSensitivity);
+        thirdPersonController.SetRotateOnMove(false);
+        animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 13f));
+
+        Vector3 worldAimTarget = mouseWorldPosition;
+        worldAimTarget.y = transform.position.y;
+        Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+
+        transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+    }
+
+    private void UseFollowCamera()
+    {
+        aimVirtualCamera.gameObject.SetActive(false);
+        thirdPersonController.SetSensitivity(normalSensitivity);
+        thirdPersonController.SetRotateOnMove(true);
+        animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 13f));
+    }
 }

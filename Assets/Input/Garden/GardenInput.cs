@@ -35,7 +35,6 @@ public class GardenInput : MonoBehaviour
         {
             case PlayerPrompts.PICKUPGUN:
                 Player.HasGun = true;
-                Debug.Log("picking up water");
                 if (pickUp != null)
                 {
                     Destroy(pickUp);
@@ -45,7 +44,6 @@ public class GardenInput : MonoBehaviour
                 gun.Refill();
                 break;
             case PlayerPrompts.PICKUPHEALTH:
-                Debug.Log("Picking up health");
                 if (pickUp != null)
                 {
                     Destroy(pickUp);
